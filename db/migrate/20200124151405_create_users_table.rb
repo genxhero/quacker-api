@@ -16,5 +16,4 @@ class CreateUsersTable < ActiveRecord::Migration[6.0]
     add_index :users, :email
     add_index :users, :session_token
   end
-  end
 end
