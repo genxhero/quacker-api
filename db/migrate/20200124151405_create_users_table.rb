@@ -2,8 +2,7 @@ class CreateUsersTable < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
       t.string :username, null: false
-      t.string :handle, null: false
-      #Degault handle is first name plus first two of last name plus random gobbledygook
+      t.string :description, null: false, default: ""
       t.string :first_name, null: false, default: "Anonymous"
       t.string :last_name, null: false, default: ""
       t.string :email, null: false
